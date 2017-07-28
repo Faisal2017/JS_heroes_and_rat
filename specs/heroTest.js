@@ -24,4 +24,8 @@ describe('Hero', function() {
     assert.equal(hero.talk(), 'Hello, my name is Kvothe');
   })
 
+  it('should have a task list that starts empty', function() {
+    assert.equal(hero.taskList.length, 0);
+  })
+
 })
