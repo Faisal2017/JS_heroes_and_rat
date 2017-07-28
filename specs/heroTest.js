@@ -12,7 +12,13 @@ describe('Hero', function() {
     assert.equal(hero.name, 'Kvothe');
   })
 
-  
+  it('should have health', function() {
+    assert.equal(hero.health, 100);
+  })
+
+  it('should have a favourite food', function() {
+    assert.equal(hero.favouriteFood, 'burrito')
+  })
 
 
 })
