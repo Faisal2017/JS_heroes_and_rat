@@ -17,8 +17,11 @@ describe('Hero', function() {
   })
 
   it('should have a favourite food', function() {
-    assert.equal(hero.favouriteFood, 'burrito')
+    assert.equal(hero.favouriteFood, 'burrito');
   })
 
+  it('should be able to talk saying their name', function() {
+    assert.equal(hero.talk(), 'Hello, my name is Kvothe');
+  })
 
 })

@@ -5,7 +5,9 @@ var Hero = function(name, health, favouriteFood) {
   this.taskList = [];
 }
 
-
+Hero.prototype.talk = function() {
+  return "Hello, my name is " + this.name;
+}
 
 
 
