@@ -5,4 +5,8 @@ var Task = function(difficulty, urgency, reward) {
   this.taskComplete = false;
 }
 
+Task.prototype.setToComplete = function() {
+  this.taskComplete = true;
+}
+
 module.exports = Task;

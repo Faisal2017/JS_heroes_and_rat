@@ -25,4 +25,9 @@ describe('Task', function() {
   it('should start with task complete set to false', function() {
     assert.equal(false, task1.taskComplete);
   })
+
+  it('should be able to set task complete marker to true', function() {
+    task2.setToComplete();
+    assert.equal(true, task2.taskComplete);
+  })
 })
