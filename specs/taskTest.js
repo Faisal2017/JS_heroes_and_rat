@@ -18,4 +18,9 @@ describe('Task', function() {
     assert.equal('high', task2.urgency);
   })
 
+  it('should have an attached reward', function() {
+    assert.equal('green trousers', task1.reward);
+  })
+
+  
 })
