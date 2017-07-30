@@ -1,17 +1,24 @@
 var assert = require('assert');
 var Hero = require("../hero.js");
 var Food = require("../food.js");
+var Task = require("../task.js");
 
 
 describe('Hero', function() {
   var hero;
   var food1;
   var food2;
+  var task1;
+  var task2;
+  var task3;
 
   beforeEach(function() {
     hero = new Hero('Kvothe', 100, 'burrito');
     food1 = new Food('blueberry pie', 20);
     food2 = new Food('burrito', 10);
+    task1 = new Task(13, 'high', 'blue trousers');
+    task2 = new Task(5, 'low', 'orange trousers');
+    task3 = new Task(10, 'medium', 'green trousers');
   })
 
   it('should have a name', function() {
@@ -42,6 +49,14 @@ describe('Hero', function() {
   it('should test favourite food provides 1.5 * healing value', function() {
     hero.eat(food2);
     assert.strictEqual(hero.health, 115);
+  })
+
+  it('should allow hero to sort task list by difficulty', function() {
+    hero.addTask(task1);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    hero.sortTaskByDifficulty();
+    assert.equal(hero.taskList, [task2, task3, task1])
   })
 
 })
