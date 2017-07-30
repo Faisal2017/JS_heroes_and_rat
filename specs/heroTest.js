@@ -1,11 +1,15 @@
 var assert = require('assert');
 var Hero = require("../hero.js");
+var Food = require("../food.js");
+
 
 describe('Hero', function() {
   var hero;
+  var food;
 
   beforeEach(function() {
     hero = new Hero('Kvothe', 100, 'burrito');
+    food = new Food('blueberry pie', 20);
   })
 
   it('should have a name', function() {
@@ -26,6 +30,11 @@ describe('Hero', function() {
 
   it('should have a task list that starts empty', function() {
     assert.equal(hero.taskList.length, 0);
+  })
+
+  it('should test that food increases hero health', function() {
+    hero.eat(food);
+    assert.equal(hero.health, 120);
   })
 
 })

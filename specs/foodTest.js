@@ -9,11 +9,11 @@ describe('Food', function() {
   })
 
   it('should have a name', function() {
-    assert.equal('blueberry pie', food.name);
+    assert.equal(food.name, 'blueberry pie');
   })
 
   it('should have a healing value', function() {
-    assert.equal(20, food.healingValue);
+    assert.equal(food.healingValue, 20);
   })
   
 })
