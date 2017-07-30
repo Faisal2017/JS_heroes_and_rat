@@ -5,3 +5,4 @@ var Task = function(difficulty, urgency, reward) {
   this.taskComplete = false;
 }
 
+module.exports = Task;
