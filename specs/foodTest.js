@@ -12,5 +12,8 @@ describe('Food', function() {
     assert.equal('blueberry pie', food.name);
   })
 
+  it('should have a healing value', function() {
+    assert.equal(20, food.healingValue);
+  })
   
 })
