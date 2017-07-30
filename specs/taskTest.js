@@ -22,5 +22,7 @@ describe('Task', function() {
     assert.equal('green trousers', task1.reward);
   })
 
-  
+  it('should start with task complete set to false', function() {
+    assert.equal(false, task1.taskComplete);
+  })
 })
