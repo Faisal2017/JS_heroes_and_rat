@@ -5,11 +5,13 @@ var Food = require("../food.js");
 
 describe('Hero', function() {
   var hero;
-  var food;
+  var food1;
+  var food2;
 
   beforeEach(function() {
     hero = new Hero('Kvothe', 100, 'burrito');
-    food = new Food('blueberry pie', 20);
+    food1 = new Food('blueberry pie', 20);
+    food2 = new Food('burrito', 10);
   })
 
   it('should have a name', function() {
@@ -33,8 +35,13 @@ describe('Hero', function() {
   })
 
   it('should test that food increases hero health', function() {
-    hero.eat(food);
+    hero.eat(food1);
     assert.equal(hero.health, 120);
+  })
+
+  it('should test favourite food provides 1.5 * healing value', function() {
+    hero.eat(food2);
+    assert.strictEqual(hero.health, 115);
   })
 
 })
