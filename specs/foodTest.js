@@ -8,5 +8,9 @@ describe('Food', function() {
     food = new Food('blueberry pie', 20);
   })
 
+  it('should have a name', function() {
+    assert.equal('blueberry pie', food.name);
+  })
+
   
 })
