@@ -10,7 +10,11 @@ Hero.prototype.talk = function() {
 }
 
 Hero.prototype.eat = function(food) {
-  return this.health += food.healingValue;  
+  if (food.name === this.favouriteFood) {
+    return this.health += (food.healingValue * 1.5);
+  } else {
+    return this.health += food.healingValue;  
+  }
 }
 
 
