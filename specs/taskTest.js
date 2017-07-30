@@ -14,4 +14,8 @@ describe('Task', function() {
     assert.equal(10, task1.difficulty);
   })
 
+  it('should have an urgency level', function() {
+    assert.equal('high', task2.urgency);
+  })
+
 })
