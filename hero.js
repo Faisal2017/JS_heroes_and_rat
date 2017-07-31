@@ -5,6 +5,10 @@ var Hero = function(name, health, favouriteFood) {
   this.taskList = [];
 }
 
+Hero.prototype.addTask = function(task) {
+  this.taskList.push(task);
+}
+
 Hero.prototype.talk = function() {
   return "Hello, my name is " + this.name;
 }
@@ -17,5 +21,10 @@ Hero.prototype.eat = function(food) {
   }
 }
 
+Hero.prototype.sortTaskList = function(search){
+  this.taskList.sort(function(a, b){
+    return a[search] - b[search];
+  })
+}
 
 module.exports = Hero;

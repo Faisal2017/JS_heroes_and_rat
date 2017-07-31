@@ -51,12 +51,12 @@ describe('Hero', function() {
     assert.strictEqual(hero.health, 115);
   })
 
-  it('should allow hero to sort task list by difficulty', function() {
+  it('should be able to sort task list by difficulty', function() {
     hero.addTask(task1);
     hero.addTask(task2);
     hero.addTask(task3);
-    hero.sortTaskByDifficulty();
-    assert.equal(hero.taskList, [task2, task3, task1])
+    hero.sortTaskList("difficulty");
+    assert.deepEqual(hero.taskList, [task2, task3, task1]);
   })
 
 })
